@@ -12,18 +12,18 @@ while true; do
     clear
     echo -e "${CYAN}"
     echo "╔══════════════════════════════════════╗"
-    echo "║        🐲 JEXACTYL MANAGER            ║"
+    echo "║        🐲 JEXACTYL MANAGER           ║"
     echo "╠══════════════════════════════════════╣"
     echo -e "║ ${GREEN}1)${NC} Install / Update Panel         ║"
     echo -e "║ ${RED}2)${NC} Uninstall / Restore Backup     ║"
     echo -e "║ ${YELLOW}3)${NC} Exit                           ║"
     echo "╠══════════════════════════════════════╣"
-    echo -e "║  Panel Control • Clean • Stable     ║"
+    echo -e "║  Panel Control • Clean • Stable      ║"
     echo "╚══════════════════════════════════════╝"
     echo -ne "${BLUE}Select an option → ${NC}"
     read choice
 
-    case $option in
+    case $choice in
 
         1)
             echo "🔰 Starting Install / Update Process..."
