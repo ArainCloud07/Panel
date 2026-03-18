@@ -49,7 +49,7 @@ while true; do
     case $OPTION in
         1)
             echo -e "\n${CYAN}🚀 Initializing Remote Installer...${NC}"
-            bash <(curl -s https://raw.githubusercontent.com/nobita329/hub/refs/heads/main/Codinghub/panel/convoy/install.sh)
+            bash <(curl -s https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/convoy/install.sh)
             read -p "Press Enter to return..."
             ;;
 
