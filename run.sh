@@ -158,7 +158,7 @@ vps_submenu() {
         
         read -p "Select option [1-2 or 0]: " vps_choice
         case $vps_choice in
-            1) bash <(curl -sL https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/vpsctrl/HVM) ;;
+            1) bash <(curl -sL https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/Vpsctrl/HVM) ;;
             2) bash <(curl -sL https://raw.githubusercontent.com/sdgamer8263-sketch/skost/main/run.sh) ;;
             0) return ;;
             *) echo -e "${RED}Invalid option. Please try again.${NC}"; sleep 1 ;;
