@@ -83,7 +83,7 @@ EOF
 
 elif [ "$choice" == "2" ]; then
 
-      bash <(curl -fsSL https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/vpsctrl/HVM)
+      bash <(curl -fsSL https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/vpsctrl/lx)
 
 # ===============================
 # INVALID OPTION
