@@ -21,7 +21,7 @@ cat << "EOF"
  
 EOF
 echo -e "${NC}"
-echo -e "${YELLOW}           Welcome to SKA HOST (SDGAMER)${NC}"
+echo -e "${YELLOW}           Welcome to SKA HOST (SDGAMER) v3.10${NC}"
 echo -e "${CYAN}=================================================${NC}"
 echo ""
 
