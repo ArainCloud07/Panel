@@ -5,11 +5,11 @@ CYAN='\033[0;36m'
 YELLOW='\033[1;33m'
 GREEN='\033[0;32m'
 RED='\033[0;31m'
-NC='\033[0m' # No Color
+NC='\033[0m'
 
 PANEL_DIR="/var/www/pterodactyl"
 
-# SDGAMER Banner
+# Banner
 clear
 echo -e "${CYAN}"
 cat << "EOF"
@@ -21,83 +21,89 @@ cat << "EOF"
  
 EOF
 echo -e "${NC}"
-echo -e "${YELLOW}           Welcome to SKA HOST (SDGAMER) v3.10${NC}"
+echo -e "${YELLOW}           Welcome to SKA HOST (SDGAMER) v10.1${NC}"
 echo -e "${CYAN}=================================================${NC}"
+echo -e "${GREEN}      Advanced Auto-Fix Installer & Updater      ${NC}"
 echo ""
 
-# Update Function
+# Fix 1: Add Swap Memory to prevent Out-of-Memory Errors
+if [ -z "$(swapon --show)" ]; then
+    echo -e "${YELLOW}[Fix] Adding 2GB Swap Memory to prevent installation crashes...${NC}"
+    fallocate -l 2G /swapfile
+    chmod 600 /swapfile
+    mkswap /swapfile
+    swapon /swapfile
+    echo '/swapfile none swap sw 0 0' | tee -a /etc/fstab
+    echo -e "${GREEN}Swap Memory added successfully!${NC}"
+fi
+
 update_panel() {
     echo -e "${GREEN}Starting Update/Downgrade setup for version ${VERSION}...${NC}"
     cd $PANEL_DIR
-    
-    # Put panel in maintenance mode
     php artisan down
     
-    # Download and extract the specified version
-    curl -L https://github.com/pterodactyl/panel/releases/download/${VERSION}/panel.tar.gz | tar -xzv
+    # Fix 2: Clear old cache before downloading
+    rm -rf bootstrap/cache/*
     
-    # Set correct permissions
+    curl -L https://github.com/pterodactyl/panel/releases/download/${VERSION}/panel.tar.gz | tar -xzv
     chmod -R 755 storage/* bootstrap/cache/
     
-    # Update dependencies via Composer
-    composer install --no-dev --optimize-autoloader
+    # Fix 3: Allow Composer as root without errors
+    COMPOSER_ALLOW_SUPERUSER=1 composer install --no-dev --optimize-autoloader
     
-    # Clear caches & Migrate database
     php artisan view:clear
     php artisan config:clear
     php artisan migrate --seed --force
-    
-    # Fix ownership & Restart Queue
     chown -R www-data:www-data $PANEL_DIR/*
     php artisan queue:restart
-    
-    # Take panel out of maintenance mode
     php artisan up
     echo -e "${GREEN}Successfully updated/downgraded to ${VERSION}!${NC}"
 }
 
-# Install Function
 install_panel() {
     echo -e "${GREEN}Starting fresh installation & setup for ${VERSION}...${NC}"
 
-    # 1. Install System Dependencies
+    echo -e "${YELLOW}Installing System Dependencies...${NC}"
     apt update -y
     apt -y install software-properties-common curl apt-transport-https ca-certificates gnupg
+    
     LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
     apt update -y
     apt -y install php8.1 php8.1-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip} mariadb-server nginx tar unzip git redis-server
 
-    # Install Composer
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-    # 2. Database Setup
+    echo -e "${YELLOW}Setting up Database...${NC}"
+    # Fix 4: Restart MariaDB to ensure it's fully running before creating DB
+    systemctl restart mariadb
+    sleep 3
+
     DB_PASSWORD=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 16 | head -n 1)
     mysql -u root -e "CREATE USER IF NOT EXISTS 'pterodactyl'@'127.0.0.1' IDENTIFIED BY '$DB_PASSWORD';"
     mysql -u root -e "CREATE DATABASE IF NOT EXISTS panel;"
     mysql -u root -e "GRANT ALL PRIVILEGES ON panel.* TO 'pterodactyl'@'127.0.0.1' WITH GRANT OPTION;"
     mysql -u root -e "FLUSH PRIVILEGES;"
 
-    # 3. Download Panel Files
+    echo -e "${YELLOW}Downloading Pterodactyl Panel...${NC}"
     mkdir -p $PANEL_DIR
     cd $PANEL_DIR
     curl -L https://github.com/pterodactyl/panel/releases/download/${VERSION}/panel.tar.gz | tar -xzv
     chmod -R 755 storage/* bootstrap/cache/
-
-    # 4. Environment and Panel Setup
     cp .env.example .env
-    composer install --no-dev --optimize-autoloader
+
+    echo -e "${YELLOW}Installing Composer Dependencies...${NC}"
+    COMPOSER_ALLOW_SUPERUSER=1 composer install --no-dev --optimize-autoloader
+    
     php artisan key:generate --force
 
-    # Configure .env file
     sed -i "s|APP_URL=http://localhost|APP_URL=https://${FQDN}|g" .env
     sed -i "s/DB_PASSWORD=/DB_PASSWORD=${DB_PASSWORD}/g" .env
 
-    # Setup Database Tables
+    echo -e "${YELLOW}Migrating Database...${NC}"
     php artisan migrate --seed --force
-
     chown -R www-data:www-data $PANEL_DIR/*
 
-    # 5. Setup Nginx
+    echo -e "${YELLOW}Configuring Nginx...${NC}"
     cat <<EOF > /etc/nginx/sites-available/pterodactyl.conf
 server {
     listen 80;
@@ -146,7 +152,6 @@ EOF
     rm -f /etc/nginx/sites-enabled/default
     systemctl restart nginx
 
-    # 6. Cron and Queue Worker
     (crontab -l -u www-data 2>/dev/null; echo "* * * * * php /var/www/pterodactyl/artisan schedule:run >> /dev/null 2>&1") | crontab -u www-data -
 
     cat <<EOF > /etc/systemd/system/pteroq.service
@@ -172,11 +177,7 @@ EOF
     echo -e "${GREEN}Fresh installation & setup completed! Panel is available at your domain.${NC}"
 }
 
-# ==========================================
-# Main Execution Logic
-# ==========================================
-
-# Check if the panel directory and .env file exist
+# Auto-Detection Logic
 if [ -d "$PANEL_DIR" ] && [ -f "$PANEL_DIR/.env" ]; then
     echo -e "${GREEN}Pterodactyl Panel detected on this system!${NC}"
     read -p "Enter Pterodactyl Version to Update/Downgrade (e.g., v1.11.7): " VERSION
