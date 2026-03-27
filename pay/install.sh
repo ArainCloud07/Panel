@@ -1,6 +1,6 @@
 #!/bin/bash
 # ==================================================
-# PTERODACTYL PANEL AUTO INSTALLER
+# PAYMENTER PANEL AUTO INSTALLER
 # Clean UI • One Page • Production Ready
 # ==================================================
 
