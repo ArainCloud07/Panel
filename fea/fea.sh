@@ -48,7 +48,7 @@ EOF
 echo -e "${C_RESET}"
 line
 echo -e "${C_GREEN}⚡ Fast • Stable • Production Ready${C_RESET}"
-echo -e "${C_PURPLE}🧠 SDGAMER — 2026 Installer${C_RESET}"
+echo -e "${C_PURPLE}🧠 Shubham — 2026 Installer${C_RESET}"
 line
 }
 
