@@ -26,7 +26,7 @@ exit_and_redirect() {
     echo -e "\n${C_MAGENTA}👋 Installation process finished.${C_RESET}"
     echo -e "${C_CYAN}Press ${C_WHITE}${C_BOLD}Enter${C_RESET}${C_CYAN} to return to SDGAMER Panel...${C_RESET}"
     read -p "" 
-    bash <(curl -sL https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/run.sh)
+    bash <(curl -sL https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/run.sh)
     exit 0
 }
 
@@ -43,7 +43,7 @@ cat << "EOF"
  █████      ░░██████ ░░████████  ░░█████  ████ █████░░██████  █████        █████       ░░████████ ████ █████░░██████  █████
 ░░░░░        ░░░░░░   ░░░░░░░░    ░░░░░  ░░░░ ░░░░░  ░░░░░░  ░░░░░        ░░░░░         ░░░░░░░░ ░░░░ ░░░░░  ░░░░░░  ░░░░░ 
                                                                                                                                                                                                                                                       
-       FeatherPanel INSTALLER Mode by - SDGAMER
+       FeatherPanel INSTALLER Mode by - Shubham
 EOF
 echo -e "${C_RESET}"
 line
@@ -203,7 +203,7 @@ nginx -t && systemctl restart nginx
 # ==============================
 clear
 echo "======================================"
-echo " ✅ FEATHERPANEL LIVE BY SDGAMER"
+echo " ✅ FEATHERPANEL LIVE BY Shubham"
 echo " 🌐 https://${DOMAIN}"
 echo " 🔑 DB Pass: ${DB_PASS}"
 echo "======================================"
