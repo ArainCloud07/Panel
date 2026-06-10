@@ -35,11 +35,11 @@ install_panel() {
 
     if [[ "$OS" == "ubuntu" || "$OS" == "debian" ]]; then
         echo -e "${GREEN}Detected Ubuntu/Debian.${NC} Running Hydra1..."
-        bash <(curl -s https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/Hydra/Hydra1.sh)
+        bash <(curl -s https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/Hydra/Hydra1.sh)
     
     elif [[ "$OS" == "fedora" ]]; then
         echo -e "${GREEN}Detected Fedora.${NC} Running Hydra2..."
-        bash <(curl -s https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/Hydra/Hydra2.sh)
+        bash <(curl -s https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/Hydra/Hydra2.sh)
     
     else
         echo -e "${RED}Unsupported OS Detected: $OS${NC}"
