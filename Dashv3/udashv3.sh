@@ -37,7 +37,7 @@ while true; do
     echo -e "${PURPLE}│${NC} ${RED}🗑️${NC} ${BOLD}3.${NC} Uninstall                ${PURPLE}│${NC}"
     echo -e "${PURPLE}│${NC} ${BLUE}🚪${NC} ${BOLD}4.${NC} Switch to SDGAMER       ${PURPLE}│${NC}"
     echo -e "${PURPLE}├────────────────────────────────────────────────┤${NC}"
-    echo -e "${PURPLE}│${NC} ${CYAN}📊${NC} Version: 3.2.3 | By: SDGAMER                ${PURPLE}│${NC}"
+    echo -e "${PURPLE}│${NC} ${CYAN}📊${NC} Version: 3.2.3 | By: Shubham                ${PURPLE}│${NC}"
     echo -e "${PURPLE}└────────────────────────────────────────────────┘${NC}"
     echo ""
     
@@ -103,8 +103,8 @@ while true; do
             ;;
             
         4)
-            echo -e "\n${MAGENTA}🔄 REDIRECTING TO SDGAMER PANEL...${NC}"
-            bash <(curl -sL https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/run.sh)
+            echo -e "\n${MAGENTA}🔄 REDIRECTING TO Shubham PANEL...${NC}"
+            bash <(curl -sL https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/run.sh)
             exit 0
             ;;
             
