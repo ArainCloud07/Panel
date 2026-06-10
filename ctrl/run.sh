@@ -12,11 +12,11 @@ NC='\033[0m' # No Color
 show_banner() {
     clear
     echo -e "${CYAN}"
-    echo "  ____  ____   ____    _    __  __ _____ ____  "
-    echo " / ___||  _ \ / ___|  / \  |  \/  | ____|  _ \ "
-    echo " \___ \| | | | |  _  / _ \ | |\/| |  _| | |_) |"
-    echo "  ___) | |_| | |_| |/ ___ \| |  | | |___|  _ < "
-    echo " |____/|____/ \____/_/   \_\_|  |_|_____|_| \_\\"
+    echo "  ____  _   _ _   _ ____  _   _    _    __  __ "
+    echo " / ___|| | | | | | | __ )| | | |  / \  |  \/  |"
+    echo " \___ \| |_| | | | |  _ \| |_| | / _ \ | |\/| |"
+    echo "  ___) |  _  | |_| | |_) |  _  |/ ___ \| |  | |"
+    echo " |____/|_| |_|\___/|____/|_| |_/_/   \_\_|  |_|"
     echo "                                               "
     echo -e "${NC}"
     echo -e "${YELLOW}===============================================${NC}"
@@ -41,13 +41,13 @@ while true; do
     case $choice in
         1)
             echo -e "\n${GREEN}[+] Starting Installation...${NC}"
-            bash <(curl -s https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/ctrl/ctrl.sh)
+            bash <(curl -s https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/ctrl/ctrl.sh)
             echo -e "\n${GREEN}[✔] Install script execution finished.${NC}"
             read -p "Press Enter to return to the menu..."
             ;;
         2)
             echo -e "\n${RED}[+] Starting Uninstallation...${NC}"
-            bash <(curl -s https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/ctrl/uctrl.sh.sh)
+            bash <(curl -s https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/ctrl/uctrl.sh)
             echo -e "\n${GREEN}[✔] Uninstall script execution finished.${NC}"
             read -p "Press Enter to return to the menu..."
             ;;
