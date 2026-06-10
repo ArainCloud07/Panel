@@ -30,9 +30,9 @@ print_error() {
 # Redirect Function for Exit
 exit_and_redirect() {
     echo -e "\n${MAGENTA}👋 Installation process finished.${NC}"
-    echo -e "${CYAN}Press ${BOLD}Enter${NC}${CYAN} to return to SDGAMER Panel...${NC}"
+    echo -e "${CYAN}Press ${BOLD}Enter${NC}${CYAN} to return to Shubham Panel...${NC}"
     read -p "" 
-    bash <(curl -sL https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/run.sh)
+    bash <(curl -sL https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/run.sh)
     exit 0
 }
 
@@ -40,7 +40,7 @@ exit_and_redirect() {
 get_domain() {
     echo -e "\n${GREEN}┌─────────────────────────────────────────────────────────┐${NC}"
     echo -e "${GREEN}│              CTRLPANEL INSTALLATION SCRIPT             │${NC}"
-    echo -e "${GREEN}│                    Powered by SDGAMER                   │${NC}"
+    echo -e "${GREEN}│                    Powered by Shubham                  │${NC}"
     echo -e "${GREEN}└─────────────────────────────────────────────────────────┘${NC}"
     echo -e ""
     echo -e "${YELLOW}Please enter your domain name for CtrlPanel${NC}"
@@ -220,7 +220,7 @@ main() {
     nginx -t && systemctl reload nginx
     
     # Final display
-    echo -e "\n${GREEN}✅ INSTALLATION COMPLETE BY SDGAMER${NC}"
+    echo -e "\n${GREEN}✅ INSTALLATION COMPLETE BY Shubham${NC}"
     echo -e "${YELLOW}URL:${NC} https://$DOMAIN_NAME"
     echo -e "${YELLOW}Path:${NC} /var/www/ctrlpanel"
     
