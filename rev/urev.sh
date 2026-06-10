@@ -15,9 +15,9 @@ BOLD="\033[1m"
 # Redirect Function for Exit
 exit_and_redirect() {
     echo -e "\n${MAGENTA}👋 Management task finished.${NC}"
-    echo -e "${CYAN}Press ${BOLD}Enter${NC}${CYAN} to return to SDGAMER Panel...${NC}"
+    echo -e "${CYAN}Press ${BOLD}Enter${NC}${CYAN} to return to Shubham Panel...${NC}"
     read -p "" 
-    bash <(curl -sL https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/run.sh)
+    bash <(curl -sL https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/run.sh)
     exit 0
 }
 
@@ -26,10 +26,10 @@ install_ptero() {
     clear
     echo -e "${CYAN}"
     echo "┌──────────────────────────────────────────────┐"
-    echo "│        🚀 SDGAMER reviactyl Install          │"
+    echo "│        🚀 Shubham reviactyl Install          │"
     echo "└──────────────────────────────────────────────┘${NC}"
     # Link remains for functionality, branding updated in flow
-    bash <(curl -s https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/rev/reviactyl.sh)
+    bash <(curl -s https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/rev/reviactyl.sh)
     echo -e "${GREEN}✔ Installation Complete${NC}"
     read -p "Press Enter to return..."
 }
@@ -39,7 +39,7 @@ create_user() {
     clear
     echo -e "${CYAN}"
     echo "┌──────────────────────────────────────────────┐"
-    echo "│        👤 Create SDGAMER Panel User           │"
+    echo "│        👤 Create Shubham Panel User           │"
     echo "└──────────────────────────────────────────────┘${NC}"
 
     if [ ! -d /var/www/reviactyl ]; then
@@ -79,7 +79,7 @@ uninstall_panel() {
     rm -f /etc/nginx/sites-available/reviactyl.conf
     systemctl reload nginx || true
 
-    echo -e "${GREEN}✅ Panel removed by SDGAMER.${NC}"
+    echo -e "${GREEN}✅ Panel removed by Shubham.${NC}"
 }
 
 uninstall_ptero() {
@@ -98,7 +98,7 @@ reset_panel() {
     clear
     echo -e "${YELLOW}"
     echo "═══════════════════════════════════════════════"
-    echo "        ⚡ SDGAMER PANEL RESET ⚡               "
+    echo "        ⚡ Shubham PANEL RESET ⚡               "
     echo "═══════════════════════════════════════════════${NC}"
 
     cd /var/www/reviactyl || {
@@ -110,7 +110,7 @@ reset_panel() {
     php artisan down
     php artisan p:upgrade
     php artisan up
-    echo -e "${GREEN}🎉 Panel Reset Successfully by SDGAMER${NC}"
+    echo -e "${GREEN}🎉 Panel Reset Successfully by Shubham${NC}"
     read -p "Press Enter to return..."
 }
 
@@ -138,7 +138,7 @@ Migrating() {
     chown -R www-data:www-data /var/www/pterodactyl/*
     sudo systemctl enable --now pteroq.service
     php artisan up
-    echo -e "${GREEN}🎉 Migration completed by SDGAMER${NC}"
+    echo -e "${GREEN}🎉 Migration completed by Shubham${NC}"
     read -p "Press Enter to return..."
 }
 
@@ -146,7 +146,7 @@ update() {
     clear
     echo -e "${YELLOW}"
     echo "═══════════════════════════════════════════════"
-    echo "        ⚡ SDGAMER PANEL UPDATE ⚡              "
+    echo "        ⚡ Shubham PANEL UPDATE ⚡              "
     echo "═══════════════════════════════════════════════${NC}"
 
       cd /var/www/reviactyl || {
@@ -175,7 +175,7 @@ clear
 echo -e "${YELLOW}"
 echo "╔═══════════════════════════════════════════════╗"
 echo "║        🐲 reviactyl CONTROL CENTER           ║"
-echo "║             Powered by SDGAMER                 ║"
+echo "║             Powered by shubham                ║"
 echo "╠═══════════════════════════════════════════════╣"
 echo -e "║ ${GREEN}1) Install Panel${NC}"
 echo -e "║ ${CYAN}2) Create Panel User${NC}"
