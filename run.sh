@@ -37,8 +37,8 @@ feather_submenu() {
         
         read -p "Select option [1-2 or 0]: " fea_choice
         case $fea_choice in
-            1) bash <(curl -s https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/fea/ufea.sh); break ;;
-            2) bash <(curl -s https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/fea/fea.sh); break ;;
+            1) bash <(curl -s https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/fea/ufea.sh); break ;;
+            2) bash <(curl -s https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/fea/fea.sh); break ;;
             0) return ;;
             *) echo -e "${RED}Invalid option. Please try again.${NC}"; sleep 1 ;;
         esac
