@@ -17,15 +17,14 @@ function show_banner() {
     clear
     echo -e "${CYAN}"
     cat << "EOF"
-   _____ ____  _____          __  __ ______ _____  
-  / ____|  _ \|  __ \   /\   |  \/  |  ____|  __ \ 
- | (___ | | | | |  \/  /  \  | \  / | |__  | |__) |
-  \___ \| | | | | __  / /\ \ | |\/| |  __| |  _  / 
-  ____) | |_| | |_\ \/ ____ \| |  | | |____| | \ \ 
- |_____/|____/ \____/_/    \_\_|  |_|______|_|  \_\
+  ____  _   _ _   _ ____  _   _    _    __  __ 
+ / ___|| | | | | | | __ )| | | |  / \  |  \/  |
+ \___ \| |_| | | | |  _ \| |_| | / _ \ | |\/| |
+  ___) |  _  | |_| | |_) |  _  |/ ___ \| |  | |
+ |____/|_| |_|\___/|____/|_| |_/_/   \_\_|  |_|
                                                        
 EOF
-    echo -e "${BLUE}    >>> POWERED BY SDGAMER HOSTING SOLUTIONS <<<    ${RESET}"
+    echo -e "${BLUE}    >>> POWERED BY Shubham HOSTING SOLUTIONS <<<    ${RESET}"
     echo -e "${YELLOW} ================================================== ${RESET}"
     echo ""
 }
@@ -116,7 +115,7 @@ while true; do
 
             echo "Localhost:8080 (http)"
             echo -e "${GREEN}==================================================${RESET}"
-            echo -e "${GREEN}         INSTALLATION COMPLETE - SDGAMER          ${RESET}"
+            echo -e "${GREEN}         INSTALLATION COMPLETE - Shubham          ${RESET}"
             echo -e "${GREEN}==================================================${RESET}"
             
             # Installation shesh hole Enter chapte bolbe
