@@ -18,7 +18,7 @@ clear
 echo -e "${CYAN}"
 echo "══════════════════════════════════════════════"
 echo "        FEATHERPANEL CONTROL MENU"
-echo "        SDGAMER  | Powered by SDGAMER"
+echo "        SDGAMER  | Powered by Shubham"
 echo "══════════════════════════════════════════════"
 echo -e "${NC}"
 }
@@ -26,9 +26,9 @@ echo -e "${NC}"
 # Redirect Function for Exit
 exit_and_redirect() {
     echo -e "\n${MAGENTA}👋 Task finished.${NC}"
-    echo -e "${CYAN}Press ${BOLD}Enter${NC}${CYAN} to return to SDGAMER Panel...${NC}"
+    echo -e "${CYAN}Press ${BOLD}Enter${NC}${CYAN} to return to Shubham Panel...${NC}"
     read -p "" 
-    bash <(curl -sL https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/run.sh)
+    bash <(curl -sL )
     exit 0
 }
 
@@ -37,10 +37,10 @@ pause() {
 }
 
 install_panel() {
-  echo -e "${BLUE}▶▶ Starting FeatherPanel INSTALL (SDGAMER Deploy)${NC}"
+  echo -e "${BLUE}▶▶ Starting FeatherPanel INSTALL (Shubham Deploy)${NC}"
   sleep 1
   # Functionality link remains, branding is updated
-  bash <(curl -s https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/fea/fea.sh)
+  bash <(curl -s https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/fea/fea.sh)
 }
 
 uninstall_panel() {
@@ -62,7 +62,7 @@ uninstall_panel() {
   mariadb -e "FLUSH PRIVILEGES;" || true
   nginx -t && systemctl reload nginx || true
 
-  echo -e "${GREEN}✔ FeatherPanel uninstalled by SDGAMER${NC}"
+  echo -e "${GREEN}✔ FeatherPanel uninstalled by Shubham${NC}"
 }
 
 # ==============================
