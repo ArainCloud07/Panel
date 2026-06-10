@@ -23,7 +23,7 @@ header() {
     echo -e "${B} | |  | | (_| | | | | | | |  | |  __/ | | | |_| |${N}"
     echo -e "${B} |_|  |_|\__,_|_|_| |_| |_|  |_|\___|_| |_|\__,_|${N}"
     echo -e "${B}=====================================================${N}"
-    echo -e "${Y}      🚀 Power By SDGAMER      ${N}"
+    echo -e "${Y}      🚀 Power By Shubham      ${N}"
     echo -e "${B}=====================================================${N}"
     echo ""
 }
@@ -48,13 +48,13 @@ while true; do
         1)
             echo ""
             echo -e "${Y}🔄 Installing Panel.${N}"
-            bash <(curl -fsSL https://raw.githubusercontent.com/sdgamer8263-sketch/panel/main/Oversee/Oversee.sh)
+            bash <(curl -fsSL https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/Oversee/Oversee.sh)
             pause
             ;;
         2)
             echo ""
             echo -e "${Y}🛠️  Installing Node.${N}"
-            bash <(curl -fsSL https://raw.githubusercontent.com/sdgamer8263-sketch/panel/main/Oversee/node)
+            bash <(curl -fsSL https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/Oversee/node)
             pause
             ;;
 
