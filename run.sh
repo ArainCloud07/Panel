@@ -88,15 +88,15 @@ panels_submenu() {
         read -p "Select option [1-10 or 0]: " panel_choice
         case $panel_choice in
             1) bash <(curl -s https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/pterodactyl/upterodactyl.sh) ;;
-            2) bash <(curl -s https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/PufferPanel/PufferPanel.sh) ;;
-            3) bash <(curl -s https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/rev/urev.sh) ;;
+            2) bash <(curl -s https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/PufferPanel/PufferPanel.sh) ;;
+            3) bash <(curl -s https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/rev/urev.sh) ;;
             4) feather_submenu ;;
             5) jexactyl_submenu ;;
-            6) bash <(curl -s https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/Skyport/run.sh) ;;
+            6) bash <(curl -s https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/Skyport/run.sh) ;;
             7) bash <(curl -s https://airlink.jishnu.fun) ;;
-            8) bash <(curl -s https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/Hydra/run.sh) ;;
-            9) bash <(curl -s https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/Oversee/run.sh) ;;
-            10) bash <(curl -s https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/Darco/run.sh) ;;
+            8) bash <(curl -s https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/Hydra/run.sh) ;;
+            9) bash <(curl -s https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/Oversee/run.sh) ;;
+            10) bash <(curl -s https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/Darco/run.sh) ;;
             0) return ;;
             *) echo -e "${RED}Invalid option. Please try again.${NC}"; sleep 1 ;;
         esac
@@ -116,8 +116,8 @@ mythical_submenu() {
         
         read -p "Select version [A, B or 0]: " dash_choice
         case $dash_choice in
-            A|a) bash <(curl -s https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/Dashv3/udashv3.sh); break ;;
-            B|b) bash <(curl -s https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/dashv4/udashv4.sh); break ;;
+            A|a) bash <(curl -s https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/Dashv3/udashv3.sh); break ;;
+            B|b) bash <(curl -s https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/dashv4/udashv4.sh); break ;;
             0) return ;;
             *) echo -e "${RED}Invalid option selected. Please try again.${NC}"; sleep 1 ;;
         esac
@@ -158,7 +158,7 @@ vps_submenu() {
         
         read -p "Select option [1-2 or 0]: " vps_choice
         case $vps_choice in
-            1) bash <(curl -sL https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/Vpsctrl/HVM) ;;
+            1) bash <(curl -sL https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/Vpsctrl/HVM) ;;
             2) bash <(curl -sL https://raw.githubusercontent.com/sdgamer8263-sketch/skost/main/run.sh) ;;
             0) return ;;
             *) echo -e "${RED}Invalid option. Please try again.${NC}"; sleep 1 ;;
@@ -186,9 +186,9 @@ while true; do
     case $main_choice in
         1) panels_submenu ;;
         2) dashboard_submenu ;;
-        3) bash <(curl -s https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/pay/upay.sh) ;;
-        4) bash <(curl -s https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/convoy/run.sh) ;;
-        5) bash <(curl -s https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/ctrl/run.sh) ;;
+        3) bash <(curl -s https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/pay/upay.sh) ;;
+        4) bash <(curl -s https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/convoy/run.sh) ;;
+        5) bash <(curl -s https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/ctrl/run.sh) ;;
         6) vps_submenu ;;
         0) echo -e "${YELLOW}Redirecting... Goodbye!${NC}"; exit 0 ;;
         *) echo -e "${RED}Invalid selection. Try again.${NC}"; sleep 1 ;;
