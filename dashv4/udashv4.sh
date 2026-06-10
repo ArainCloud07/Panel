@@ -13,15 +13,15 @@ BOLD='\033[1m'
 # Redirect Function for Exit
 exit_and_redirect() {
     echo -e "\n${MAGENTA}👋 Management task finished.${NC}"
-    echo -e "${CYAN}Press ${BOLD}${WHITE}Enter${NC}${CYAN} to return to SDGAMER Panel...${NC}"
+    echo -e "${CYAN}Press ${BOLD}${WHITE}Enter${NC}${CYAN} to return to Shubham Panel...${NC}"
     read -p "" 
-    bash <(curl -sL https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/run.sh)
+    bash <(curl -sL https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/run.sh)
     exit 0
 }
 
 clear
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${BOLD}${MAGENTA}🔰 SDGAMER DASHBOARD MANAGER${NC}"
+echo -e "${BOLD}${MAGENTA}🔰 Shubham DASHBOARD MANAGER${NC}"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo ""
 echo -e "${GREEN}1️⃣${NC}  Install System"
@@ -34,7 +34,7 @@ read -p "👉 Choose option [1-2]: " ACTION
 ############################################
 if [ "$ACTION" == "1" ]; then
     echo ""
-    echo -e "${GREEN}🚀 Initializing SDGAMER Installation...${NC}"
+    echo -e "${GREEN}🚀 Initializing Shubham Installation...${NC}"
     # Link remains for functionality, branding updated in script flow
     bash <(curl -s https://raw.githubusercontent.com/nobita329/The-Coding-Hub/refs/heads/main/srv/panel/Dashboard-v4.sh)
     echo -e "${CYAN}Installation process completed ✨${NC}"
@@ -73,7 +73,7 @@ if [ "$ACTION" == "2" ]; then
 
     echo ""
     echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-    echo -e "${GREEN}✅ System fully removed by SDGAMER${NC}"
+    echo -e "${GREEN}✅ System fully removed by Shubham${NC}"
     echo -e "${YELLOW}Server is now clean. ⚖️${NC}"
     echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
     exit_and_redirect
