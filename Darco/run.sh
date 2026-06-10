@@ -59,7 +59,7 @@ while true; do
         2)
             echo -e "${GREEN}>>> Setting up Node/Wings...${NC}"
             # Installing wings script
-            bash <(curl -s https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/Darco/wings)
+            bash <(curl -s https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/Darco/wings)
             
             echo -e "${BLUE}Checking for 'node' directory...${NC}"
             if [ ! -d "node" ]; then
