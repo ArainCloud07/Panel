@@ -76,11 +76,11 @@ source /etc/os-release
 
 if [[ "$ID" == "ubuntu" ]]; then
     echo "Ubuntu detected"
-    bash <(curl -s https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/ctrl/Ubuntu.sh)
+    bash <(curl -s https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/ctrl/Ubuntu.sh)
 
 elif [[ "$ID" == "debian" ]]; then
     echo "Debian detected"
-    bash <(curl -s https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/ctrl/Debian.sh)
+    bash <(curl -s https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/ctrl/Debian.sh)
 
 else
     echo "Unsupported OS: $ID"
