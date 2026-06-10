@@ -10,7 +10,7 @@ WHITE='\033[1;37m'
 NC='\033[0m' 
 BOLD='\033[1m'
 
-# Function to display the SDGAMER banner
+# Function to display the Shubham banner
 show_banner() {
     clear
     echo -e "${CYAN}-------------------------------------------------------${NC}"
@@ -58,8 +58,8 @@ jexactyl_submenu() {
         
         read -p "Select option [1-2 or 0]: " jex_choice
         case $jex_choice in
-            1) bash <(curl -s https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/Jexactyl/uJexactyl.sh); break ;;
-            2) bash <(curl -s https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/Jexapanel/Jp.sh); break ;;
+            1) bash <(curl -s https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/Jexactyl/uJexactyl.sh); break ;;
+            2) bash <(curl -s https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/Jexapanel/Jp.sh); break ;;
             0) return ;;
             *) echo -e "${RED}Invalid option. Please try again.${NC}"; sleep 1 ;;
         esac
@@ -87,7 +87,7 @@ panels_submenu() {
         
         read -p "Select option [1-10 or 0]: " panel_choice
         case $panel_choice in
-            1) bash <(curl -s https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/pterodactyl/upterodactyl.sh) ;;
+            1) bash <(curl -s https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/pterodactyl/upterodactyl.sh) ;;
             2) bash <(curl -s https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/PufferPanel/PufferPanel.sh) ;;
             3) bash <(curl -s https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/rev/urev.sh) ;;
             4) feather_submenu ;;
