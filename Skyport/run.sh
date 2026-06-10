@@ -12,13 +12,13 @@ clear
 
 # SDGAMER Banner
 echo -e "${CYAN}=====================================================${NC}"
-echo -e "${YELLOW}  ____  ____   ____    _    __  __ _____ ____  
- / ___||  _ \ / ___|  / \  |  \/  | ____|  _ \ 
- \___ \| | | | |  _  / _ \ | |\/| |  _| | |_) |
-  ___) | |_| | |_| |/ ___ \| |  | | |___|  _ < 
- |____/|____/ \____/_/   \_\_|  |_|_____|_| \_\ ${NC}"
+echo -e "${YELLOW}  ____  _   _ _   _ ____  _   _    _    __  __
+ / ___|| | | | | | | __ )| | | |  / \  |  \/  |
+ \___ \| |_| | | | |  _ \| |_| | / _ \ | |\/| |
+  ___) |  _  | |_| | |_) |  _  |/ ___ \| |  | |
+ |____/|_| |_|\___/|____/|_| |_/_/   \_\_|  |_| ${NC}"
 echo -e "${CYAN}=====================================================${NC}"
-echo -e "${GREEN}      Skyport Panel & Wings Installer by SDGAMER     ${NC}"
+echo -e "${GREEN}      Skyport Panel & Wings Installer by Shubham    ${NC}"
 echo -e "${CYAN}=====================================================${NC}"
 echo ""
 echo -e "${YELLOW}Select an option:${NC}"
@@ -32,11 +32,11 @@ read -p "Enter your choice: " choice
 case $choice in
     1)
         echo -e "${CYAN}Starting Skyport Panel Installation...${NC}"
-        sudo su -c "bash <(curl -s https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/Skyport/Skyport.panel.sh)"
+        sudo su -c "bash <(curl -s https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/Skyport/Skyport.panel.sh)"
         ;;
     2)
         echo -e "${CYAN}Starting Wings/Node Installation...${NC}"
-        sudo su -c "bash <(curl -s https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/Skyport/Skyport.wingsl.sh)"
+        sudo su -c "bash <(curl -s https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/Skyport/Skyport.wings.sh"
         
         echo -e "${YELLOW}Now configuring node...${NC}"
         if [ -d "skyportd" ]; then
