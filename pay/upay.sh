@@ -45,7 +45,7 @@ install_paymenter() {
     echo "⏳ This may take a few minutes..."
     
     # Run the Paymenter install script
-    bash <(curl -s https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/pay/install.sh)
+    bash <(curl -s https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/pay/install.sh)
     
     printf "${GREEN}║                                                              ║\n"
     printf "║${WHITE}          ✅ INSTALLATION PROCESS COMPLETE!              ${GREEN}║\n"
