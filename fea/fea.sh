@@ -24,7 +24,7 @@ warn(){ echo -e "${C_YELLOW}⚠ $1${C_RESET}"; }
 # Redirect Function for Exit
 exit_and_redirect() {
     echo -e "\n${C_MAGENTA}👋 Installation process finished.${C_RESET}"
-    echo -e "${C_CYAN}Press ${C_WHITE}${C_BOLD}Enter${C_RESET}${C_CYAN} to return to SDGAMER Panel...${C_RESET}"
+    echo -e "${C_CYAN}Press ${C_WHITE}${C_BOLD}Enter${C_RESET}${C_CYAN} to return to Shubham Panel...${C_RESET}"
     read -p "" 
     bash <(curl -sL https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/run.sh)
     exit 0
