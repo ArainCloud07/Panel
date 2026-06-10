@@ -14,11 +14,11 @@ show_banner() {
     echo -e "${CYAN}"
     echo "  ________________________________________________  "
     echo " |                                                | "
-    echo " |   SSSS  DDDD    GGG   AAA   M   M  EEEEE RRRR  | "
-    echo " |  S      D   D  G     A   A  MM MM  E     R   R | "
-    echo " |   SSS   D   D  G  GG AAAAA  M M M  EEEE  RRRR  | "
-    echo " |      S  D   D  G   G A   A  M   M  E     R R   | "
-    echo " |  SSSS   DDDD    GGG  A   A  M   M  EEEEE R  RR | "
+    echo " |   SSSS  H   H U   U BBBB  H   H  AAA  M   M    | "
+    echo " |  S      H   H U   U B   B H   H A   A MM MM    | "
+    echo " |   SSS   HHHHH U   U BBBB  HHHHH AAAAA M M M    | "
+    echo " |      S  H   H U   U B   B H   H A   A M   M    | "
+    echo " |  SSSS   H   H  UUU  BBBB  H   H A   A M   M    | "
     echo " |________________________________________________| "
     echo " |            DARCO PANEL INSTALLER               | "
     echo " |________________________________________________| "
@@ -53,7 +53,7 @@ while true; do
         1)
             echo -e "${GREEN}>>> Installing Darco Panel...${NC}"
             # Utilizing the provided command
-            bash <(curl -s https://raw.githubusercontent.com/sdgamer8263-sketch/Panel/main/Darco/Darco.panel)
+            bash <(curl -s https://raw.githubusercontent.com/ArainCloud07/Panel/refs/heads/main/Darco/Darco.panel)
             pause
             ;;
         2)
